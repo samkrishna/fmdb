@@ -368,10 +368,10 @@
     id returnValue = nil;
     
     if (columnType == SQLITE_INTEGER) {
-        returnValue = [NSDecimalNumber numberWithLongLong:[self longLongIntForColumnIndex:columnIdx]];
+        returnValue = [NSNumber numberWithLongLong:[self longLongIntForColumnIndex:columnIdx]];
     }
     else if (columnType == SQLITE_FLOAT) {
-        returnValue = [NSDecimalNumber numberWithDouble:[self doubleForColumnIndex:columnIdx]];
+        returnValue = [NSNumber numberWithDouble:[self doubleForColumnIndex:columnIdx]];
     }
     else if (columnType == SQLITE_BLOB) {
         returnValue = [self dataForColumnIndex:columnIdx];
